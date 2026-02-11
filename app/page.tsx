@@ -1,18 +1,35 @@
 import { BlogPosts } from 'app/components/posts'
-
+import Hero from './components/Hero/Hero'
+import Benefits from './components/Benefits/Benefits'
+import AiIsCoolSection from './components/AiIsCool/AiIsCoolSection'
+import ImportantSection from './components/Important/ImportantSection'
+import Neon from './components/UI/Neon'
+import BenefitsSection from './components/BenefitsSection/BenefitsSection'
+import CourseProgramSection from "@/app/components/CourseProgram/CourseProgramSection";
+import AuthorSection from "./components/AuthorSection/AuthorSection";
+import CarouselAnnouncements from "./components/CarouselAnnouncements/CarouselAnnouncements";
+import VacanciesSection from "./components/VacanciesSection/VacanciesSection";
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
+      <Hero />
+      <Neon />
+      <Benefits />
+      <Neon />
+      <AiIsCoolSection />
+      <Neon />
+      <ImportantSection />
+      <Neon />
+      <BenefitsSection />
+      <Neon />
+      <CourseProgramSection />
+      <Neon />
+      <AuthorSection />
+      <Neon />
+      <CarouselAnnouncements />
+      <Neon />
+      <VacanciesSection />
+    
       <div className="my-8">
         <BlogPosts />
       </div>
