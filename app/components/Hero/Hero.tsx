@@ -13,7 +13,7 @@ export default function Hero() {
 
 
       <p className="relative z-20 text-lg md:text-2xl mb-8 bg-gradient-to-b from-white to-cyan-200 bg-clip-text text-transparent max-w-xl text-center drop-shadow-[0_1px_8px_rgba(0,0,0,0.8)]">
-        Я создаю современные веб-приложения с использованием React, Next.js и Tailwind CSS
+        Помогаю бизнесу запускать быстрые и понятные веб-продукты: от идеи и архитектуры до релиза и поддержки
       </p>
       {/* Блок картинок с абсолютным позиционированием */}
       <div className="absolute inset-0 w-full h-full pointer-events-none opacity-70">
@@ -30,7 +30,7 @@ export default function Hero() {
       </div>
 
       <button className="px-8 py-4 bg-primary text-black font-semibold rounded-lg shadow-neon hover:brightness-110 transition-all z-20">
-        Связаться со мной
+        Обсудить проект
       </button>
     </section>
 

@@ -12,7 +12,7 @@ export default function GoogleButton() {
             fill="#4285F4"
           />
         </svg>
-        Continue with Google
+        Быстрый контакт
       </button>
     </div>
   );

@@ -32,7 +32,7 @@ const ImportantSectionGrid = () => {
     <section style={{ background: "var(--gradient-background2)" }}
      className="py-16 px-6 md:px-16 ">
       <h2 className="text-4xl md:text-6xl font-bold text-cyan-400 mb-10">
-        ВАЖНО ПОНИМАТЬ ЧТО
+        ВАЖНО ДЛЯ ПРОЕКТА
       </h2>
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">

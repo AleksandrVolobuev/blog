@@ -41,26 +41,26 @@ export default function CarouselAnnouncements() {
     {
       id: 1,
       img: "/Carousel/5.png",
-      title: "Заголовок объявления из нескольких слов",
+      title: "Редизайн SaaS-платформы",
       text:
-        "Искусственный интеллект — это не одна дисциплина, как думают многие, а совокупность различных между собой направлений.",
-      date: "24 мая 2021",
+        "Пересобрал интерфейс и улучшил пользовательский путь. Результат: более понятная навигация и меньше отказов.",
+      date: "15 января 2026",
     },
     {
       id: 2,
       img: "/Carousel/6.png",
-      title: "Открытие новой лаборатории",
+      title: "Оптимизация производительности",
       text:
-        "Мы запускаем обновлённую лабораторию робототехники для всех учеников старших классов.",
-      date: "10 июня 2021",
+        "Сократил время загрузки ключевых страниц и улучшил Core Web Vitals без потери функциональности.",
+      date: "20 ноября 2025",
     },
     {
       id: 3,
       img: "/Carousel/7.png",
-      title: "Набор в летнюю IT-школу",
+      title: "Запуск MVP за короткий срок",
       text:
-        "Приглашаем всех желающих на интенсив по программированию, робототехнике и дизайну.",
-      date: "28 июля 2021",
+        "Подготовил архитектуру, реализовал фронтенд и интеграции, чтобы команда быстро протестировала гипотезу.",
+      date: "3 сентября 2025",
     },
   ];
 
@@ -71,12 +71,12 @@ export default function CarouselAnnouncements() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold">Объявления школы</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Кейсы и заметки</h2>
           <Link
             href="/blog"
             className="px-5 py-2 rounded-lg bg-primary text-black font-semibold hover:brightness-110 transition-all"
           >
-            Все объявления школы
+            Все материалы
           </Link>
         </div>
 

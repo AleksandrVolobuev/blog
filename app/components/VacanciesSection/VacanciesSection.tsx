@@ -2,27 +2,27 @@ export default function VacanciesSection() {
   const vacancies = [
     {
       id: 1,
-      title: "Требуется администратор",
+      title: "Landing Page под запуск",
       image: "/importantIMG/1.png",
-      experience: "от 1 года",
-      education: "Высшее",
-      age: "21–35 лет",
+      experience: "1-2 недели",
+      education: "Фикс-прайс",
+      age: "Готовый лендинг + адаптив",
     },
     {
       id: 2,
-      title: "Требуется менеджер",
+      title: "Корпоративный сайт",
       image: "/importantIMG/2.png",
-      experience: "от 1 года",
-      education: "Высшее",
-      age: "21–35 лет",
+      experience: "3-5 недель",
+      education: "Этапная оплата",
+      age: "Сайт + CMS + SEO-база",
     },
     {
       id: 3,
-      title: "Требуется администратор",
+      title: "Поддержка и развитие продукта",
       image: "/importantIMG/3.png",
-      experience: "от 1 года",
-      education: "Высшее",
-      age: "21–35 лет",
+      experience: "От 20 ч/мес",
+      education: "Почасовой формат",
+      age: "Регулярные улучшения",
     },
   ];
 
@@ -33,9 +33,9 @@ export default function VacanciesSection() {
     >
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-bold">Вакансии</h2>
+          <h2 className="text-3xl md:text-4xl font-bold">Форматы сотрудничества</h2>
           <button className="px-5 py-2 rounded-lg bg-primary text-black font-semibold hover:brightness-110 transition-all">
-            Все вакансии →
+            Обсудить формат →
           </button>
         </div>
 
@@ -75,15 +75,15 @@ export default function VacanciesSection() {
 
               <ul className="text-sm text-neutral-200 space-y-2 mb-5 relative z-10">
                 <li className="flex justify-between gap-4">
-                  <span className="opacity-80">Опыт работы</span>
+                  <span className="opacity-80">Срок</span>
                   <span className="font-medium text-white">{vac.experience}</span>
                 </li>
                 <li className="flex justify-between gap-4">
-                  <span className="opacity-80">Образование</span>
+                  <span className="opacity-80">Оплата</span>
                   <span className="font-medium text-white">{vac.education}</span>
                 </li>
                 <li className="flex justify-between gap-4">
-                  <span className="opacity-80">Возраст</span>
+                  <span className="opacity-80">Результат</span>
                   <span className="font-medium text-white">{vac.age}</span>
                 </li>
               </ul>

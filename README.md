@@ -1,42 +1,118 @@
-# Portfolio Blog Starter
+# AI Portfolio + Blog (Next.js)
 
-This is a porfolio site template complete with a blog. Includes:
+Лендинг-портфолио с блогом на `MDX`, собранный на `Next.js App Router`.
+Проект включает SEO-роуты (`sitemap`, `robots`), RSS, динамические OG-изображения и клиентскую форму подписки.
 
-- MDX and Markdown support
-- Optimized for SEO (sitemap, robots, JSON-LD schema)
-- RSS Feed
-- Dynamic OG images
-- Syntax highlighting
-- Tailwind v4
-- Vercel Speed Insights / Web Analytics
-- Geist font
+## Что есть в проекте
 
-## Demo
+- `Next.js` (App Router)
+- `React` + `TypeScript`
+- `Tailwind CSS v4 alpha`
+- Контент блога в `MDX` (`app/blog/posts/*.mdx`)
+- SEO: `app/sitemap.ts`, `app/robots.ts`
+- RSS: `app/rss/route.ts`
+- Dynamic OG image: `app/og/route.tsx`
+- `@vercel/analytics` и `@vercel/speed-insights`
+- UI-компоненты лендинга в `app/components/*`
 
-https://portfolio-blog-starter.vercel.app
+## Быстрый старт
 
-## How to Use
+### 1. Требования
 
-You can choose from one of the following two methods to use this repository:
+- `Node.js` 18+
+- `pnpm` 8+
 
-### One-Click Deploy
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/examples/tree/main/solutions/blog&project-name=blog&repository-name=blog)
-
-### Clone and Deploy
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [pnpm](https://pnpm.io/installation) to bootstrap the example:
+### 2. Установка
 
 ```bash
-pnpm create next-app --example https://github.com/vercel/examples/tree/main/solutions/blog blog
+pnpm install
 ```
 
-Then, run Next.js in development mode:
+### 3. Запуск в dev-режиме
 
 ```bash
 pnpm dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/templates) ([Documentation](https://nextjs.org/docs/app/building-your-application/deploying)).
+Приложение будет доступно по адресу: `http://localhost:3000`.
+
+## Скрипты
+
+```bash
+pnpm dev      # локальная разработка
+pnpm build    # production build (Turbopack в Next canary)
+pnpm start    # запуск production-сборки
+```
+
+Дополнительно (если `pnpm build` падает в текущем окружении из-за Turbopack):
+
+```bash
+pnpm exec next build --webpack
+```
+
+## Структура проекта
+
+```text
+app/
+  api/subscribe/route.js        # API для формы подписки
+  blog/
+    posts/*.mdx                 # статьи блога
+    [slug]/page.tsx             # страница поста
+    page.tsx                    # список постов
+    utils.ts                    # парсинг frontmatter + утилиты дат
+  components/                   # секции лендинга и UI-компоненты
+  og/route.tsx                  # динамическая OG-картинка
+  rss/route.ts                  # RSS фид
+  sitemap.ts                    # sitemap.xml
+  robots.ts                     # robots.txt
+  layout.tsx                    # общий layout
+  page.tsx                      # главная страница
+public/                         # изображения и статика
+```
+
+## Как добавить пост в блог
+
+1. Создай файл в `app/blog/posts`, например `my-post.mdx`.
+2. Добавь frontmatter в начале файла:
+
+```mdx
+---
+title: 'My post title'
+publishedAt: '2026-02-12'
+summary: 'Short description of the post'
+image: '/blog/my-post/cover.jpg'
+---
+
+Контент поста...
+```
+
+3. Пост автоматически появится в списке `/blog` и будет доступен по `/blog/my-post`.
+
+## Форма подписки
+
+- UI: `app/components/ContactForm/ContactForm.tsx`
+- API endpoint: `POST /api/subscribe` (`app/api/subscribe/route.js`)
+- Сейчас реализована базовая валидация email и возврат JSON-ответа.
+
+## SEO и feed
+
+- `GET /sitemap.xml` генерируется из `app/sitemap.ts`
+- `GET /robots.txt` из `app/robots.ts`
+- `GET /rss` из `app/rss/route.ts`
+- `GET /og` из `app/og/route.tsx`
+
+## Деплой
+
+Рекомендуемый вариант: Vercel.
+
+1. Подключи репозиторий в Vercel.
+2. Build command: `pnpm build` (или `pnpm exec next build --webpack`, если нужно обойти Turbopack-падение в вашем окружении).
+3. Output: стандартный для Next.js.
+
+## Troubleshooting
+
+- Предупреждение о `multiple lockfiles`:
+  - Next может выбрать корень workspace не там, где ожидается.
+  - Решение: оставить один lockfile на верхнем уровне monorepo или явно задать root в конфиге Next.
+- Ошибка Turbopack в sandbox/ограниченном окружении:
+  - Использовать fallback: `pnpm exec next build --webpack`.

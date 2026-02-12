@@ -1,13 +1,13 @@
 import React from "react";
 
 const benefitsData = [
-  { icon: "/Benifits/conference.svg", text: "Ты станешь востребованным специалистом в области искусственного интеллекта" },
-  { icon: "/Benifits/survey.svg", text: "Будешь создавать модели искусственного интеллекта на Python" },
-  { icon: "/Benifits/diploma.svg", text: "Сумеешь создавать программы с компьютерным зрением и нейросетями" },
-  { icon: "/Benifits/manager.svg", text: "Мы обучаем только тому, что пригодится в реальной работе" },
-  { icon: "/Benifits/people.svg", text: "Ты найдёшь единомышленников для совместных проектов" },
-  { icon: "/Benifits/conference.svg", text: "Мы создаём IT-сообщество профессионалов" },
-  { icon: "/Benifits/skyscrapers.svg", text: "Поможем трудоустроиться после обучения" },
+  { icon: "/Benifits/conference.svg", text: "Погружаюсь в задачу бизнеса, а не просто закрываю тикеты по шаблону." },
+  { icon: "/Benifits/survey.svg", text: "Проектирую понятную архитектуру, чтобы продукт было легко развивать." },
+  { icon: "/Benifits/diploma.svg", text: "Пишу чистый и поддерживаемый код с акцентом на качество и скорость." },
+  { icon: "/Benifits/manager.svg", text: "Прозрачно веду процесс: сроки, риски и статус видны на каждом этапе." },
+  { icon: "/Benifits/people.svg", text: "Быстро вхожу в legacy-проекты и аккуратно улучшаю их без регрессий." },
+  { icon: "/Benifits/conference.svg", text: "Держу фокус на UX, SEO и Core Web Vitals, чтобы продукт реально работал лучше." },
+  { icon: "/Benifits/skyscrapers.svg", text: "Остаюсь на связи после релиза и помогаю с дальнейшим развитием." },
 ];
 
 export default function Benefits() {
@@ -16,7 +16,7 @@ export default function Benefits() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
 
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-14">
-          Почему выбирают наш курс
+          Почему со мной работают
         </h2>
 
         {/* === GRID 12 COLS === */}

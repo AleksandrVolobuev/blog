@@ -25,7 +25,7 @@ export default function AiIsCoolSection() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
 
         <h2 className="text-4xl md:text-5xl font-bold text-cyan-300 mb-14">
-          ИСКУССТВЕННЫЙ <br /> ИНТЕЛЛЕКТ — ЭТО КРУТО?
+          КАК Я УСИЛИВАЮ <br /> ВАШ ПРОЕКТ
         </h2>
 
         <ul className="space-y-4">
@@ -42,7 +42,7 @@ export default function AiIsCoolSection() {
             rounded-xl shadow-[0_0_30px_rgba(0,255,255,0.4)]
             transition-all
           ">
-            Записаться на ознакомительный вебинар
+            Посмотреть кейсы
           </button>
         </div>
 

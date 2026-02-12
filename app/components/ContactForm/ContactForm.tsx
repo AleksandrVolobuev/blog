@@ -32,6 +32,9 @@ export default function ContactForm() {
     try {
       const res = await fetch("/api/subscribe", {
         method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
         body: JSON.stringify({ email }),
       });
 
@@ -41,7 +44,7 @@ export default function ContactForm() {
         return;
       }
 
-      setSuccess("Успешно отправлено!");
+      setSuccess("Спасибо! Я свяжусь с вами.");
       setEmail("");
     } catch {
       setError("Ошибка сети");
@@ -60,7 +63,7 @@ export default function ContactForm() {
           <form onSubmit={handleSubmit} className="mt-5">
             {/* Email */}
             <label className="font-semibold text-sm text-gray-400 pb-1 block">
-              E-mail
+              Ваш e-mail
             </label>
 
             <input
@@ -74,31 +77,14 @@ export default function ContactForm() {
             {error && <p className="text-red-400 text-sm">{error}</p>}
             {success && <p className="text-green-400 text-sm">{success}</p>}
 
-            {/* Password */}
-            <label className="font-semibold text-sm text-gray-400 pb-1 block mt-4">
-              Password
-            </label>
-
-            <input
-              type="password"
-              className="border rounded-lg px-3 py-2 mt-1 mb-5 text-sm w-full bg-gray-700 text-white"
-            />
-
             <button
               type="submit"
               disabled={loading}
-              className="px-6 py-2 rounded-lg bg-accent text-black font-semibold disabled:opacity-50 w-full"
+              className="px-6 py-2 mt-2 rounded-lg bg-accent text-black font-semibold disabled:opacity-50 w-full"
             >
-              {loading ? "Отправка..." : "Отправить"}
+              {loading ? "Отправка..." : "Отправить заявку"}
             </button>
           </form>
-
-          {/* Forgot */}
-          <div className="text-right mt-4">
-            <a className="text-xs text-gray-500 hover:text-gray-400 cursor-pointer">
-              Forgot Password?
-            </a>
-          </div>
 
           <GoogleButton />
         </div>

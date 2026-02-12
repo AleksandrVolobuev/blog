@@ -1,10 +1,9 @@
 import Link from 'next/link'
 
 const navItems = {
-  '/': { name: 'Home' },
-  '/blog': { name: 'Blog' },
-  'https://vercel.com/templates/next.js/portfolio-starter-kit': { name: 'Deploy' },
-  '/form': { name: 'Contact' },
+  '/': { name: 'Главная' },
+  '/blog': { name: 'Блог' },
+  '/form': { name: 'Контакты' },
 }
 
 export function Navbar() {
@@ -34,4 +33,3 @@ export function Navbar() {
     </aside>
   )
 }
-
