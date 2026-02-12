@@ -1,5 +1,6 @@
 import AiIsCoolItem from "./AiIsCoolItem";
 import { aiFacts } from "./aiIsCoolData";
+import { withBasePath } from "@/app/lib/paths";
 
 export default function AiIsCoolSection() {
   return (
@@ -7,18 +8,18 @@ export default function AiIsCoolSection() {
       <div className="absolute top-70 right-2 w-[800px] h-[800px]">
         <div className="relative">
           <img
-            src="/Hero/fon2.svg"
+            src={withBasePath("/Hero/fon2.svg")}
             className="absolute inset-0 mix-blend-lighten  z-0 "
           />
           <img
-            src="/AiIsCool/ai-artificial.png"
+            src={withBasePath("/AiIsCool/ai-artificial.png")}
             className="relative z-10  mix-blend-lighten"
           />
         </div>
       </div>
       {/* Правый фон */}
       <img
-        src="/Hero/fon1.svg"
+        src={withBasePath("/Hero/fon1.svg")}
         className="absolute right-0 top-0 h-full opacity-40 pointer-events-none"
       />
 

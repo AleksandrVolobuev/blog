@@ -1,3 +1,5 @@
+import { withBasePath } from "@/app/lib/paths";
+
 export default function AiIsCoolItem({ text }) {
   return (
     <li
@@ -11,7 +13,7 @@ export default function AiIsCoolItem({ text }) {
     hover:-translate-y-1 hover:scale-[1.02]
   "
     >
-      <img src="/AiIsCool/icons1.svg" alt="" className="w-6 h-6" />
+      <img src={withBasePath("/AiIsCool/icons1.svg")} alt="" className="w-6 h-6" />
       <p className="text-neutral-200 leading-relaxed">{text}</p>
     </li>
   );

@@ -1,4 +1,5 @@
 import React from "react";
+import { withBasePath } from "@/app/lib/paths";
 
 const benefitsData = [
   { icon: "/Benifits/conference.svg", text: "Погружаюсь в задачу бизнеса, а не просто закрываю тикеты по шаблону." },
@@ -47,7 +48,7 @@ export default function Benefits() {
                 "></div>
               </div>
 
-              <img src={item.icon} alt="" className="w-14 h-14 mb-6 z-10" />
+              <img src={withBasePath(item.icon)} alt="" className="w-14 h-14 mb-6 z-10" />
 
               <p className="text-neutral-200 text-lg leading-relaxed z-10">
                 {item.text}

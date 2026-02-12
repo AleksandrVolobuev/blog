@@ -1,4 +1,6 @@
 
+import { withBasePath } from "@/app/lib/paths";
+
 export default function Hero() {
 
 
@@ -19,11 +21,11 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full pointer-events-none opacity-70">
         <div className="relative w-full h-full">
           <img
-            src="/Hero/fon2.svg"
+            src={withBasePath("/Hero/fon2.svg")}
             className="absolute inset-0 w-full h-full object-cover mix-blend-lighten z-0"
           />
           <img
-            src="/Hero/neuron.png"
+            src={withBasePath("/Hero/neuron.png")}
             className="absolute inset-0 w-full h-full object-cover mix-blend-lighten z-10"
           />
         </div>

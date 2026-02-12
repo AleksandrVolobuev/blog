@@ -1,9 +1,11 @@
+import { withBasePath } from "@/app/lib/paths";
+
 export default function VacanciesSection() {
   const vacancies = [
     {
       id: 1,
       title: "Landing Page под запуск",
-      image: "/importantIMG/1.png",
+      image: withBasePath("/importantIMG/1.png"),
       experience: "1-2 недели",
       education: "Фикс-прайс",
       age: "Готовый лендинг + адаптив",
@@ -11,7 +13,7 @@ export default function VacanciesSection() {
     {
       id: 2,
       title: "Корпоративный сайт",
-      image: "/importantIMG/2.png",
+      image: withBasePath("/importantIMG/2.png"),
       experience: "3-5 недель",
       education: "Этапная оплата",
       age: "Сайт + CMS + SEO-база",
@@ -19,7 +21,7 @@ export default function VacanciesSection() {
     {
       id: 3,
       title: "Поддержка и развитие продукта",
-      image: "/importantIMG/3.png",
+      image: withBasePath("/importantIMG/3.png"),
       experience: "От 20 ч/мес",
       education: "Почасовой формат",
       age: "Регулярные улучшения",

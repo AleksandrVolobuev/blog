@@ -8,6 +8,10 @@ const nextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  env: {
+    NEXT_PUBLIC_BASE_PATH:
+      isGithubPagesBuild && !isDev ? `/${repoName}` : '',
+  },
 }
 
 if (isGithubPagesBuild) {

@@ -1,3 +1,5 @@
+import { withBasePath } from "@/app/lib/paths";
+
 export default function BenefitsSection() {
   const items = [
     "Говорю на языке бизнеса и перевожу сложные технические решения в понятные шаги.",
@@ -12,11 +14,11 @@ export default function BenefitsSection() {
       <div className="absolute top-70 -right-56 w-[1000px] h-[1000px]">
         <div className="relative">
           <img
-            src="/BenefitsSection/div3.svg"
+            src={withBasePath("/BenefitsSection/div3.svg")}
             className="absolute inset-0 mix-blend-lighten  z-0 "
           />
           <img
-            src="/BenefitsSection/mac1.png"
+            src={withBasePath("/BenefitsSection/mac1.png")}
             className="relative z-10  mix-blend-lighten"
           />
         </div>
@@ -35,7 +37,7 @@ export default function BenefitsSection() {
           <ul className="mt-10 space-y-6">
             {items.map((item, index) => (
               <li key={index} className="flex items-start gap-4">
-                <img src="/BenefitsSection/v1.svg" alt="v1" />
+                <img src={withBasePath("/BenefitsSection/v1.svg")} alt="v1" />
                 <p className="text-lg">{item}</p>
               </li>
             ))}

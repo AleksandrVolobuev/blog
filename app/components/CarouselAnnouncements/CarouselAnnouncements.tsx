@@ -2,14 +2,15 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
+import { withBasePath } from "@/app/lib/paths";
 
 export default function CarouselAnnouncements() {
   // --- Слайды карусели ---
   const slides = [
-    "/Carousel/5.png",
-    "/Carousel/6.png",
-    "/Carousel/7.png",
-    "/Carousel/8.png",
+    withBasePath("/Carousel/5.png"),
+    withBasePath("/Carousel/6.png"),
+    withBasePath("/Carousel/7.png"),
+    withBasePath("/Carousel/8.png"),
   ];
 
   const [current, setCurrent] = useState(0);
@@ -40,7 +41,7 @@ export default function CarouselAnnouncements() {
   const announcements = [
     {
       id: 1,
-      img: "/Carousel/5.png",
+      img: withBasePath("/Carousel/5.png"),
       title: "Редизайн SaaS-платформы",
       text:
         "Пересобрал интерфейс и улучшил пользовательский путь. Результат: более понятная навигация и меньше отказов.",
@@ -48,7 +49,7 @@ export default function CarouselAnnouncements() {
     },
     {
       id: 2,
-      img: "/Carousel/6.png",
+      img: withBasePath("/Carousel/6.png"),
       title: "Оптимизация производительности",
       text:
         "Сократил время загрузки ключевых страниц и улучшил Core Web Vitals без потери функциональности.",
@@ -56,7 +57,7 @@ export default function CarouselAnnouncements() {
     },
     {
       id: 3,
-      img: "/Carousel/7.png",
+      img: withBasePath("/Carousel/7.png"),
       title: "Запуск MVP за короткий срок",
       text:
         "Подготовил архитектуру, реализовал фронтенд и интеграции, чтобы команда быстро протестировала гипотезу.",

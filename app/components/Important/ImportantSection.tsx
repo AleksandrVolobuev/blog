@@ -1,10 +1,11 @@
 import React from "react";
 import { importantGridData } from "./importantData";
+import { withBasePath } from "@/app/lib/paths";
 
 const GridItemImg = ({ src, alt }) => {
   return (
     <div className="w-full h-48 md:h-56 rounded-xl overflow-hidden border border-cyan-400/20 relative">
-      <img src={src} alt={alt} className="w-full h-full object-cover" />
+      <img src={withBasePath(src)} alt={alt} className="w-full h-full object-cover" />
       <span className="pointer-events-none absolute left-1/4 right-1/4 bottom-2 h-2 rounded-full blur-xl bg-cyan-400/30" />
     </div>
   );

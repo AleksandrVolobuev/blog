@@ -1,9 +1,11 @@
+import { withBasePath } from "@/app/lib/paths";
+
 export default function AuthorSection() {
   return (
     <section className="relative w-full bg-[#042835] text-white py-20 px-6 md:px-20 overflow-hidden">
           <div className="absolute inset-0 opacity-40 pointer-events-none">
             <img
-              src="/AuthorSection/fon3.png"
+              src={withBasePath("/AuthorSection/fon3.png")}
               alt="background"
               className="w-full h-full object-cover"
             />
@@ -12,7 +14,7 @@ export default function AuthorSection() {
         <div className="absolute top-70 -right-56 w-[1000px] h-[1000px]">
         <div className="relative">
           <img
-            src="/BenefitsSection/div3.svg"
+            src={withBasePath("/BenefitsSection/div3.svg")}
             className="absolute inset-0 mix-blend-lighten  z-0 "
           />
      
@@ -59,7 +61,7 @@ export default function AuthorSection() {
         {/* Фото */}
         <div className="flex justify-center md:justify-end relative">
           <img
-            src="/AuthorSection/foto.png"
+            src={withBasePath("/AuthorSection/foto.png")}
             alt="author"
             className="w-[340px] md:w-[420px] object-contain relative z-10"
           />
